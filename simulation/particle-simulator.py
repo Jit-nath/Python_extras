@@ -28,8 +28,8 @@ class Particle:
         if self.y <= 0 or self.y >= height:
             self.vy *= -1
 
-    def draw(self, screen):
-        pygame.draw.circle(screen, self.color, (int(self.x), int(self.y)), self.size)
+    def draw(self, scr):
+        pygame.draw.circle(scr, self.color, (int(self.x), int(self.y)), self.size)
 
 # Create particles
 particles = [Particle(random.uniform(0, width), random.uniform(0, height)) for _ in range(100)]
